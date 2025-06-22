@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel = "stylesheet" href = "/static/style.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel = "stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>📌 Weather App 📌</h1>
+
+        <div id = "locationSection">
+
+            <input type = "text" id = "locationInput" placeholder = "Enter Location">
+            <button onclick = "fetchWeather()">Get Weather</button>
+            <p id = "errorMessage" class = "error"></p>
+
+        </div>
+
+        <div id = "weatherSection" class = "hidden">
+
+            <div class = "weather-info">
+
+                <div class = "weather-icon">
+
+                    <img id = "weatherImage" src = "" alt = "Weather Icon">
+
+                </div>
+
+                <div class = "temperature">
+
+                    <h2 id = "temperature">--°C</h2>
+
+                </div>
+
+            </div>
+
+            <div id = "weatherDetails">
+
+                <p id = "weatherReport" class="fade-in-stagger">Weather: --</p>
+                <p id = "humidity" class="fade-in-stagger">Humidity: --%</p>
+                <p id = "windSpeed" class="fade-in-stagger">Wind Speed: -- m/s</p>
+                <p id = "cloudCover" class="fade-in-stagger">Cloud Cover: --%</p>
+                <p id = "sunrise" class="fade-in-stagger">Sunrise: --</p>
+                <p id = "sunset" class="fade-in-stagger">Sunset: --</p>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src = "/static/script.js"></script>
+
+</body>
+</html>
